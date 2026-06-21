@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "23ee6a242b243260",
+        "id": "9ebba69a2b34f46d",
         "type": "tabs",
         "children": [
           {
-            "id": "fe4fc0fbbbfe05c9",
+            "id": "5365e363eb8cc4f5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "animation/Skinning.md",
-                "mode": "source",
-                "source": false
+                "file": "rendering/Blinn-Phong-Lighting.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "Skinning"
+              "title": "Blinn-Phong-Lighting"
             }
           }
         ]
@@ -33,7 +33,7 @@
       {
         "id": "fccd44e440ada242",
         "type": "tabs",
-        "dimension": 55.819125277983694,
+        "dimension": 62.935507783543365,
         "children": [
           {
             "id": "b7d7b430a8371fe4",
@@ -63,7 +63,7 @@
       {
         "id": "765e103309fe3fb0",
         "type": "tabs",
-        "dimension": 44.180874722016306,
+        "dimension": 37.064492216456635,
         "children": [
           {
             "id": "8429eb866f7f4a91",
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 445.5
+    "width": 368
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -98,7 +98,6 @@
       {
         "id": "e10a211cbdaca755",
         "type": "tabs",
-        "dimension": 61.923454367026494,
         "children": [
           {
             "id": "71f49061b08b58ef",
@@ -179,31 +178,23 @@
               "icon": "lucide-search",
               "title": "Search"
             }
-          }
-        ],
-        "currentTab": 4
-      },
-      {
-        "id": "105c780aeb2a4d54",
-        "type": "tabs",
-        "dimension": 38.0765456329735,
-        "children": [
+          },
           {
-            "id": "4f692054988b3b5f",
+            "id": "ca3ca409eee60f8f",
             "type": "leaf",
             "state": {
-              "type": "calendar",
+              "type": "claudian-view",
               "state": {},
-              "icon": "calendar-with-checkmark",
-              "title": "Calendar"
+              "icon": "bot",
+              "title": "Claudian"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 396.5,
-    "collapsed": true
+    "width": 1039
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -215,37 +206,48 @@
       "bases:Create new base": false,
       "canvas:Create new canvas": false,
       "obsidian-git:Open Git source control": false,
-      "terminal:Open terminal": false
+      "realclaudian:Open Claudian": false
     }
   },
-  "active": "8429eb866f7f4a91",
+  "active": "5365e363eb8cc4f5",
   "lastOpenFiles": [
-    "04 - Math/MP.3DRotation.md",
+    "03 - D3D11/D3D11.ConstantBuffer.md",
+    "rendering/Blinn-Phong-Lighting.md",
+    "03 - D3D11/D3D11.VertexShader.md",
+    "03 - D3D11/D3D11.Canvas.canvas",
+    "rendering/Render-Target.md",
+    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
+    "rendering/Portal-Rendering.md",
+    "rendering/Deferred-Rendering.md",
+    "index.md.tmp.1776.723ef31753b1",
+    "rendering",
+    "log.md.tmp.1776.be43c25a1b7b",
+    "wiki/syntheses/_TEMPLATE.md",
+    "wiki/entities/_TEMPLATE.md",
+    "wiki/concepts/_TEMPLATE.md",
+    "wiki/summaries/_TEMPLATE.md",
+    "wiki/README.md",
+    "raw/README.md",
+    "raw/README.md.tmp.1776.7e2fe981a336",
+    "CLAUDE.md",
+    "log.md",
+    "log.md.tmp.1776.f8a326cb52e3",
+    "index.md",
+    "LLM Wiki.md",
+    "CLAUDE.md.tmp.1776.1273f3939cf3",
+    "wiki/syntheses",
+    "wiki/summaries",
+    "wiki/entities",
+    "wiki/concepts",
     "animation/Skinning.md",
+    "llm/3-Tokenization.md",
+    "llm/2-Architecture.md",
+    "llm/5-Fine-tuning.md",
+    "llm/1-Fundamentals.md",
+    "llm/7-Inference-Optimization.md",
+    "llm/LLM-Wiki.md",
+    "04 - Math/MP.3DRotation.md",
     "04 - Math/MP.AABB2.md",
-    "04 - Math/MP.AABB2.GetDimensions.md",
-    "04 - Math/MP.AABB2.GetNearestPoint.md",
-    "04 - Math/MP.AABB2.IsPointInside.md",
-    "04 - Math/MP.AABB2.SetDimensions.md",
-    "04 - Math/MP.AABB3.Raycast.md",
-    "04 - Math/MP.Disc.GetNearestPointOnDisc2D.md",
-    "04 - Math/MP.Disc.IsPointInsideDisc2D.md",
-    "04 - Math/MP.Disc.PushDiscOutOfFixedPoint2D.md",
-    "04 - Math/MP.MathUtils.CrossProduct.md",
-    "04 - Math/MP.MathUtils.DotProduct.md",
-    "04 - Math/MP.MathUtils.GetFractionWithinRange.md",
-    "04 - Math/MP.MathUtils.GetTurnedTowardDegrees.md",
-    "04 - Math/MP.MathUtils.GetShortestAngularDispDegrees.md",
-    "04 - Math/MP.MathUtils.GetNearestPointOnTriangle2D_v2.md",
-    "04 - Math/MP.MathUtils.PushDiscOutOfFixedAABB2D.md",
-    "04 - Math/MP.MathUtils.RangeMap.md",
-    "04 - Math/MP.MathUtils.RangeMapClamped.md",
-    "04 - Math/MP.MathUtils.RoundDownToInt.md",
-    "04 - Math/MP.MathUtils.Standard.md",
-    "04 - Math/MP.OBB2.GetNearestPointOnOBB2.md",
-    "04 - Math/MP.OBB2.IsPointInsideOBB2D.md",
-    "04 - Math/MP.OBB2.OBB2.md",
-    "04 - Math/MP.Vec2.GetClamped.md",
     "Assets/Screenshot 2025-12-19 201845.png",
     "Assets/Screenshot 2025-12-19 201929.png",
     "Assets/Screenshot 2025-07-26 150515.png",
@@ -256,17 +258,6 @@
     "Assets/UnrealEngine/UE.ProjectSettings.Packaging_01.png",
     "Assets/UnrealEngine/UE.APlayerController.SetInputModeGameOnly_01.png",
     "Assets/UnrealEngine/UE.APlayerController.SetInputModeUIOnly_01.png",
-    "Assets/C++",
-    "Assets/D3D11",
-    "Assets/UnrealEngine",
-    "Assets/Math",
-    "execute_reorg.py",
-    "analyze_images.py",
-    "02 - UnrealEngine/Systems",
-    "02 - UnrealEngine/Framework/Player",
-    "02 - UnrealEngine/Framework/Core",
-    "02 - UnrealEngine/Framework/Actor",
-    "03 - D3D11/D3D11.Canvas.canvas",
     "Concept/Concept.D3D11.Canvas.canvas",
     "Untitled.canvas",
     "_temp_/Material.canvas",
