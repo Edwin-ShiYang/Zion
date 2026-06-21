@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 368
+    "width": 283
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -194,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1039
+    "width": 1113
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,7 +209,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "5365e363eb8cc4f5",
+  "active": "8429eb866f7f4a91",
   "lastOpenFiles": [
     "03 - D3D11/D3D11.ConstantBuffer.md",
     "rendering/Blinn-Phong-Lighting.md",
