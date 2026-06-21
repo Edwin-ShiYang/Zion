@@ -194,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1113
+    "width": 1557
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,7 +209,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "8429eb866f7f4a91",
+  "active": "ca3ca409eee60f8f",
   "lastOpenFiles": [
     "03 - D3D11/D3D11.ConstantBuffer.md",
     "rendering/Blinn-Phong-Lighting.md",

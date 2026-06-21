@@ -181,7 +181,116 @@ float specularExponent = RangeMap( glossiness, 0.f, 1.f, 1.f, 32.f );
 float3 emissiveLight = diffuseTexel.rgb * emissiveness;
 ```
 
-不依赖任何光源，直接由贴图的自发光通道决定亮度，常用于灯泡、霓虹灯、屏幕等。
+```
+diffuseTexel  = 贴图本身的颜色
+emissiveness  = 自发光强度（通常从 SpecGlossEmit 贴图的蓝色通道读出来）
+```
+
+不依赖任何光源，直接由贴图的自发光通道决定亮度：`emissiveness = 0` 不发光（正常受光照影响），`emissiveness = 1` 自己发光（哪怕全黑环境也亮）。常用于灯泡、霓虹灯字、屏幕、发光符文等。
+
+---
+
+## 最终合成公式
+
+```hlsl
+float3 finalRGB = (saturate(totalDiffuseLight) * diffuseColor.rgb)
+                 + (totalSpecularLight * specularity)
+                 + emissiveLight;
+```
+
+| 项 | 含义 |
+| :--- | :--- |
+| `saturate(totalDiffuseLight) * diffuseColor.rgb` | 漫反射强度 × 物体本身颜色 |
+| `totalSpecularLight * specularity` | 高光强度 × 表面反光程度（金属度/specularity 贴图控制） |
+| `emissiveLight` | 自发光，直接加上，不受光照影响 |
+
+### 为什么漫反射要乘物体颜色，高光不用
+
+```
+漫反射：光被物体"吸收再散射"，带上物体本身颜色
+        红色苹果在白光下反射红光，因为表面吸收了其他颜色
+
+高光：  光在表面直接镜面反射，大多数材质的高光接近光源颜色（白色）
+        几乎不受物体本身颜色影响
+        （红苹果上的高光斑点看起来是白色的，不是红色的）
+```
+
+---
+
+## 点光源 / 聚光灯：衰减与聚光锥
+
+太阳光无限远、方向永远一样、强度不随距离变化。点光源/聚光灯不一样：有具体位置，离得越远越暗，超出范围完全没光；聚光灯还多一层"只朝一个方向照"的限制。
+
+### 衰减半径（Falloff）
+
+```hlsl
+float distToLight = length( pixelToLightDisp );
+float falloff = saturate( RangeMap( distToLight, innerRadius, outerRadius, 1.f, 0.f ) );
+falloff = SmoothStep3( falloff );
+```
+
+```
+innerRadius 内：满强度（falloff = 1）
+outerRadius 外：完全没光（falloff = 0）
+中间：渐变
+```
+
+```
+        outerRadius
+       ╱─────────╲
+      │ innerRadius │
+      │      ●      │   ← 光源在中心
+       ╲─────────╱
+```
+
+用 `SmoothStep3`（`3x² - 2x³`）代替直接线性插值，让两端变化慢、中间变化快，过渡更自然，肉眼看不出突变边界。
+
+### 聚光锥（Penumbra）
+
+点光源四面八方发光，聚光灯像手电筒只照一个锥形范围。判断"在不在锥形里"还是靠点乘：
+
+```hlsl
+float penumbra = saturate( RangeMap( dot( c_spotForward, lightToPixelDir ), outerPenumbraDot, innerPenumbraDot, 0.f, 1.f ) );
+penumbra = SmoothStep3( penumbra );
+```
+
+```
+c_spotForward   = 聚光灯朝向的方向
+lightToPixelDir = 光源 → 像素 的方向
+
+dot 接近 1  →  像素在聚光灯正前方中心 → 最亮
+dot 接近 0  →  像素在锥形边缘 → 变暗
+dot 更小    →  完全在锥形外 → 没光
+```
+
+```
+                聚光灯
+                  ●
+                 ╱│╲
+        外锥边界 ╱ │ ╲ 外锥边界
+              ╱ 内锥 │   ╲
+            ╱─────┼─────╲
+       完全照亮   过渡区   完全照亮
+```
+
+`innerPenumbraDot` / `outerPenumbraDot` 是**提前转换成 cos 值**存起来的角度阈值：
+
+```cpp
+// C++ 端，内锥 20°，外锥 30°
+light.c_innerDotThreshold = cos( DegreesToRadians( 20.f ) );
+light.c_outerDotThreshold = cos( DegreesToRadians( 30.f ) );
+```
+
+提前转 cos 是因为 GPU 的 `dot()` 算出来的就是 cos 值，两边统一比较 cos，避免在 Shader 里反复算开销很大的 `acos`。
+
+### 一套公式同时处理点光源和聚光灯
+
+```hlsl
+innerPenumbraDot = -1; // 用于 point light
+outerPenumbraDot = -2; // 用于 point light
+```
+
+任何方向的 `dot()` 结果都 ≥ -1，所以 `RangeMap(dot, -2, -1, 0, 1)` 这种范围永远映射出 1（全亮）——点光源借用同一套聚光灯公式，靠"开区间足够大"实现"四面八方都满强度"，不用写两套逻辑。
 
 ---
 
