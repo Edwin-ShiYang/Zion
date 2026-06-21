@@ -4,8 +4,8 @@
   "title": "Say hello",
   "titleGenerationStatus": "success",
   "createdAt": 1779744115352,
-  "updatedAt": 1782063711447,
-  "lastResponseAt": 1782063711447,
+  "updatedAt": 1782063932630,
+  "lastResponseAt": 1782063932630,
   "sessionId": "7c2901d7-ce7e-4ff0-9e63-97f412083bb8",
   "providerState": {
     "providerSessionId": "7c2901d7-ce7e-4ff0-9e63-97f412083bb8"
@@ -13,11 +13,11 @@
   "usage": {
     "model": "sonnet",
     "inputTokens": 2,
-    "cacheCreationInputTokens": 173,
-    "cacheReadInputTokens": 139025,
+    "cacheCreationInputTokens": 1805,
+    "cacheReadInputTokens": 143458,
     "contextWindow": 1000000,
-    "contextTokens": 139200,
-    "percentage": 14,
+    "contextTokens": 145265,
+    "percentage": 15,
     "contextWindowIsAuthoritative": true
   }
 }

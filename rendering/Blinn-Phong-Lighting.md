@@ -37,6 +37,84 @@ dot(A, B) = cos(夹角)
 
 ---
 
+## 法线贴图与切线空间（TBN）
+
+光照公式里用的 `pixelNormalWorldSpace` 不是顶点自带的法线，而是经过法线贴图扰动后算出来的——这一步决定了表面看起来有没有凹凸细节。
+
+### 为什么需要法线贴图
+
+每个三角形如果只用一个法线，整个面是平的，没有细节（比如砖墙看不出凹凸）。**法线贴图给每个像素一个独立、略微偏转的法线，制造凹凸视觉效果，而不用真的增加几何体。**
+
+### 贴图里存的是编码后的方向
+
+贴图像素格式（如 `R8G8B8A8_UNORM`）只能存 `0~255`（归一化后 `0.0~1.0`），没有负数概念，但法线向量需要负数分量（`-1.0~1.0`）。所以要先编码再存：
+
+```hlsl
+float3 EncodeXYZToRGB( float3 vec )   { return (vec + 1.0) * 0.5; } // 制作贴图时用
+float3 DecodeRGBToXYZ( float3 color ) { return (color * 2.0) - 1.0; } // 读取贴图后用
+```
+
+```
+向量 -1.0 → 编码 → 颜色 0.0 → 解码 → 向量 -1.0  ✓
+向量  0.0 → 编码 → 颜色 0.5 → 解码 → 向量  0.0  ✓
+向量  1.0 → 编码 → 颜色 1.0 → 解码 → 向量  1.0  ✓
+```
+
+最常见的法线"指向正前方" = `(0,0,1)`，编码后 = `(0.5,0.5,1.0)`，这就是法线贴图大多偏蓝紫色的原因。
+
+### Tangent Space：存的是"相对方向"
+
+解码出来的方向不是世界空间方向，而是 **Tangent Space（切线空间）**——相对于贴图表面自己的偏转。
+
+```
+如果法线贴图存"世界空间"的绝对方向，同一张贴图换个角度贴到别的物体上，
+凹凸效果就全错了——"凸起朝右"，但物体转了方向后"右"在世界里已经变了
+
+所以贴图存的是："在贴图自己的局部坐标系里，这个像素比平面法线偏左/偏右多少"
+不管贴在哪个朝向的物体上，这个相对偏转都不用变
+```
+
+Tangent Space 的三个轴：
+
+```
+Normal（N）    = 表面"正前方"（垂直于表面）
+Tangent（T）   = 沿 UV 的 U 方向（通常是"右"）
+Bitangent（B） = 沿 UV 的 V 方向（通常是"上"）
+```
+
+### TBN 矩阵：把相对方向转回世界空间
+
+T、B、N 是建模软件算好存在顶点数据里的（模型空间），Vertex Shader 先转到 World Space：
+
+```hlsl
+float4 worldTangent   = mul( c_modelToWorld, modelTangent );
+float4 worldBitangent = mul( c_modelToWorld, modelBitangent );
+float4 worldNormal    = mul( c_modelToWorld, modelNormal );
+```
+
+再用这三个世界空间方向组成一个矩阵，作为新坐标系的三根轴：
+
+```hlsl
+float3x3 tbnToWorld = float3x3( surfaceTangentWorldSpace, surfaceBitangentWorldSpace, surfaceNormalWorldSpace );
+float3 pixelNormalWorldSpace = mul( pixelNormalTBNSpace, tbnToWorld );
+```
+
+类比：站在斜坡上，"左右上下"是相对于你身体的（Tangent Space）；别人说"往你右边走一步"，你需要知道身体的"右"在世界里实际指向哪个方向（World Space）才能走对——TBN 矩阵就是做这个转换。
+
+### 完整链路
+
+```
+法线贴图像素颜色 (0,1)
+  ↓ DecodeRGBToXYZ
+Tangent Space 方向 (-1,1)
+  ↓ × tbnToWorld 矩阵
+World Space 方向 = pixelNormalWorldSpace
+  ↓ dot(光源方向, 这个方向)
+漫反射 / 高光强度
+```
+
+---
+
 ## Diffuse：Lambert's Law
 
 ```hlsl
