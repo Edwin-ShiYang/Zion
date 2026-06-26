@@ -82,7 +82,12 @@
     "shader": 70,
     "pipeline": 71,
     "lighting": 72,
-    "blinn-phong": 73
+    "blinn-phong": 73,
+    "thesis": 74,
+    "reference-scout": 75,
+    "combat": 76,
+    "boss-ai": 77,
+    "game-feel": 78
   },
   "_version": 3
 }

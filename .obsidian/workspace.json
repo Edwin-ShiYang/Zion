@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AGENTS.md",
+                "file": "animation/Skinning.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "AGENTS"
+              "title": "Skinning"
+            }
+          },
+          {
+            "id": "cb8aae342d0031a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "thesis/reference-scout/2026-06-25.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-25"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -162,7 +177,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AGENTS.md",
+                "file": "thesis/reference-scout/2026-06-25.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +187,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for AGENTS"
+              "title": "Backlinks for 2026-06-25"
             }
           },
           {
@@ -181,12 +196,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AGENTS.md",
+                "file": "thesis/reference-scout/2026-06-25.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from AGENTS"
+              "title": "Outgoing links from 2026-06-25"
             }
           }
         ],
@@ -194,7 +209,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1262
+    "width": 1021
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,8 +224,18 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "5365e363eb8cc4f5",
+  "active": "cb8aae342d0031a8",
   "lastOpenFiles": [
+    "animation/Skinning.md",
+    "thesis/reference-scout/2026-06-25.md",
+    "thesis/reference-scout",
+    "thesis",
+    "raw/README.md",
+    "rendering/Blinn-Phong-Lighting.md",
+    "rendering/Deferred-Rendering.md",
+    "rendering/Portal-Rendering.md",
+    "wiki/concepts/_TEMPLATE.md",
+    "AGENTS.md",
     "log.md",
     "CLAUDE.md",
     "index.md",
@@ -218,19 +243,13 @@
     "Perforce.md",
     "Cheatsheet/Cheatsheet.Markdown.md",
     "wiki/syntheses/knowledge-iteration-system-for-zion.md",
-    "AGENTS.md",
     "temp.md",
     "rendering/Render-Target.md",
-    "rendering/Portal-Rendering.md",
-    "rendering/Deferred-Rendering.md",
-    "rendering/Blinn-Phong-Lighting.md",
-    "raw/README.md",
     "Cheatsheet/Cheatsheet.UE.Shortcuts.md",
     "00 - Assets/Math/MP.AABB2.GetDimensions_01.png",
     "Assets/Screenshot 2025-07-26 150515.png",
     "Assets/Screenshot 2025-12-19 201845.png",
     "Assets/Screenshot 2025-12-19 201929.png",
-    "animation/Skinning.md",
     "02 - UnrealEngine/AI/UE.AAIController.GetBlackboardComponent.md",
     "03 - D3D11/D3D11.ConstantBuffer.md",
     "03 - D3D11/D3D11.VertexShader.md",
@@ -241,7 +260,6 @@
     "log.md.tmp.1776.be43c25a1b7b",
     "wiki/syntheses/_TEMPLATE.md",
     "wiki/entities/_TEMPLATE.md",
-    "wiki/concepts/_TEMPLATE.md",
     "wiki/summaries/_TEMPLATE.md",
     "wiki/README.md",
     "raw/README.md.tmp.1776.7e2fe981a336",
@@ -249,9 +267,6 @@
     "CLAUDE.md.tmp.1776.1273f3939cf3",
     "wiki/syntheses",
     "wiki/summaries",
-    "wiki/entities",
-    "wiki/concepts",
-    "llm/3-Tokenization.md",
     "Assets/UnrealEngine/UE.UKismetSystemLibrary.FlipFlop_01.png",
     "Assets/UnrealEngine/UE.MetaSound_02.png",
     "Assets/UnrealEngine/UE.MetaSound_01.png",

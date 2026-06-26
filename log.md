@@ -12,6 +12,14 @@ created: 2026-05-25
 
 ---
 
+## [2026-06-25] query+archive | Thesis reference scout
+
+- ???? thesis reference scout?[[thesis/reference-scout/2026-06-25]]
+- ???Animation-Driven Third Person Melee Combat?
+- ?????game feel?impact feel?motion matching?behavior trees?game AI?utility AI?
+
+---
+
 ## [2026-06-25] meta | Zion 知识迭代系统 v1.1
 
 - 新增 [[AGENTS]]：面向 Codex / Claudian / 通用 LLM Agent 的 Vault 维护手册。
