@@ -1,3 +1,0 @@
-# URadialFalloff
-
-Type: Class

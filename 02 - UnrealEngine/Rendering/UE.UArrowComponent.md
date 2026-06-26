@@ -1,3 +1,0 @@
-# UArrowComponent
-
-Type: Class

@@ -1,3 +1,0 @@
-# FGameplayEffectAttributeCaptureDefinition
-
-Type: Struct

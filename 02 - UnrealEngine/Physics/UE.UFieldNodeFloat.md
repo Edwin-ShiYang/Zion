@@ -1,3 +1,0 @@
-# UFieldNodeFloat
-
-Type: Class

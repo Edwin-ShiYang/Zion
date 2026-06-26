@@ -1,6 +1,0 @@
-# UAbilityTask_WaitGameplayEvent
-
-System: GAS
-Type: Class
-
-[UAbilityTask_WaitGameplayEvent](UAbilityTask_WaitGameplayEvent/UAbilityTask_WaitGameplayEvent%2013d8d590ff388010a235d53852b94f73.csv)

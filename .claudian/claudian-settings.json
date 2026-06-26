@@ -3,7 +3,7 @@
   "permissionMode": "normal",
   "model": "sonnet",
   "thinkingBudget": "low",
-  "effortLevel": "low",
+  "effortLevel": "medium",
   "serviceTier": "default",
   "enableAutoTitleGeneration": true,
   "titleGenerationModel": "",
@@ -20,13 +20,13 @@
     "focusInputKey": "i"
   },
   "requireCommandOrControlEnterToSend": false,
-  "locale": "en",
+  "locale": "zh-CN",
   "providerConfigs": {
     "claude": {
       "safeMode": "acceptEdits",
       "cliPath": "",
       "cliPathsByHost": {},
-      "loadUserSettings": true,
+      "loadUserSettings": false,
       "enableChrome": false,
       "enableBangBash": false,
       "enableOpus1M": false,
@@ -37,7 +37,7 @@
       "environmentHash": ""
     },
     "codex": {
-      "enabled": false,
+      "enabled": true,
       "safeMode": "workspace-write",
       "cliPath": "",
       "cliPathsByHost": {},
@@ -65,17 +65,23 @@
   },
   "settingsProvider": "claude",
   "savedProviderModel": {
-    "claude": "sonnet"
+    "claude": "sonnet",
+    "codex": "gpt-5.5"
   },
   "savedProviderEffort": {
-    "claude": "low"
+    "claude": "medium",
+    "codex": "low"
   },
-  "savedProviderServiceTier": {},
+  "savedProviderServiceTier": {
+    "codex": "fast"
+  },
   "savedProviderThinkingBudget": {
-    "claude": "low"
+    "claude": "low",
+    "codex": "low"
   },
   "savedProviderPermissionMode": {
-    "claude": "normal"
+    "claude": "normal",
+    "codex": "normal"
   },
   "lastCustomModel": "",
   "maxTabs": 3,

@@ -1,4 +1,0 @@
----
-Hierarchy:
-Category:
----

@@ -1,3 +1,0 @@
-# FGameplayAbilityActorInfo
-
-Type: Struct

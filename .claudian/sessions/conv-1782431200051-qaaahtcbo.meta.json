@@ -1,0 +1,25 @@
+{
+  "id": "conv-1782431200051-qaaahtcbo",
+  "providerId": "codex",
+  "title": "A pattern for building personal knowledge bases us...",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1782431200052,
+  "updatedAt": 1782432626391,
+  "lastResponseAt": 1782432626391,
+  "sessionId": "019f013f-3ffe-7280-8fd5-55c3ba6100b8",
+  "providerState": {
+    "threadId": "019f013f-3ffe-7280-8fd5-55c3ba6100b8",
+    "sessionFilePath": "C:\\Users\\Yang Shi\\.codex\\sessions\\2026\\06\\25\\rollout-2026-06-25T19-05-55-019f013f-3ffe-7280-8fd5-55c3ba6100b8.jsonl",
+    "transcriptRootPath": "C:\\Users\\Yang Shi\\.codex\\sessions"
+  },
+  "usage": {
+    "inputTokens": 58369,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 55168,
+    "contextWindow": 258400,
+    "contextWindowIsAuthoritative": true,
+    "contextTokens": 58369,
+    "percentage": 23,
+    "model": "gpt-5.5"
+  }
+}

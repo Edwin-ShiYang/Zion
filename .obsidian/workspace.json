@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rendering/Blinn-Phong-Lighting.md",
+                "file": "AGENTS.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Blinn-Phong-Lighting"
+              "title": "AGENTS"
             }
           }
         ]
@@ -100,39 +100,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "71f49061b08b58ef",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "C++/auto.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for auto"
-            }
-          },
-          {
-            "id": "20e4060ebff46e27",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "00 - Assets/IMG_0021.png",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from IMG_0021"
-            }
-          },
-          {
             "id": "d3b89968b21057a1",
             "type": "leaf",
             "state": {
@@ -153,13 +120,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01 - C++/keywords/auto.md",
+                "file": "animation/Skinning.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of auto"
+              "title": "Outline of Skinning"
             }
           },
           {
@@ -188,13 +155,46 @@
               "icon": "bot",
               "title": "Claudian"
             }
+          },
+          {
+            "id": "d6610321fe33b0d6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "AGENTS.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for AGENTS"
+            }
+          },
+          {
+            "id": "788708772484c033",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "AGENTS.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from AGENTS"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 1425
+    "width": 1262
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,16 +209,33 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ca3ca409eee60f8f",
+  "active": "5365e363eb8cc4f5",
   "lastOpenFiles": [
-    "03 - D3D11/D3D11.ConstantBuffer.md",
-    "rendering/Blinn-Phong-Lighting.md",
-    "03 - D3D11/D3D11.VertexShader.md",
-    "03 - D3D11/D3D11.Canvas.canvas",
+    "log.md",
+    "CLAUDE.md",
+    "index.md",
+    "LLM Wiki.md",
+    "Perforce.md",
+    "Cheatsheet/Cheatsheet.Markdown.md",
+    "wiki/syntheses/knowledge-iteration-system-for-zion.md",
+    "AGENTS.md",
+    "temp.md",
     "rendering/Render-Target.md",
-    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
     "rendering/Portal-Rendering.md",
     "rendering/Deferred-Rendering.md",
+    "rendering/Blinn-Phong-Lighting.md",
+    "raw/README.md",
+    "Cheatsheet/Cheatsheet.UE.Shortcuts.md",
+    "00 - Assets/Math/MP.AABB2.GetDimensions_01.png",
+    "Assets/Screenshot 2025-07-26 150515.png",
+    "Assets/Screenshot 2025-12-19 201845.png",
+    "Assets/Screenshot 2025-12-19 201929.png",
+    "animation/Skinning.md",
+    "02 - UnrealEngine/AI/UE.AAIController.GetBlackboardComponent.md",
+    "03 - D3D11/D3D11.ConstantBuffer.md",
+    "03 - D3D11/D3D11.VertexShader.md",
+    "03 - D3D11/D3D11.Canvas.canvas",
+    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
     "index.md.tmp.1776.723ef31753b1",
     "rendering",
     "log.md.tmp.1776.be43c25a1b7b",
@@ -227,37 +244,20 @@
     "wiki/concepts/_TEMPLATE.md",
     "wiki/summaries/_TEMPLATE.md",
     "wiki/README.md",
-    "raw/README.md",
     "raw/README.md.tmp.1776.7e2fe981a336",
-    "CLAUDE.md",
-    "log.md",
     "log.md.tmp.1776.f8a326cb52e3",
-    "index.md",
-    "LLM Wiki.md",
     "CLAUDE.md.tmp.1776.1273f3939cf3",
     "wiki/syntheses",
     "wiki/summaries",
     "wiki/entities",
     "wiki/concepts",
-    "animation/Skinning.md",
     "llm/3-Tokenization.md",
-    "llm/2-Architecture.md",
-    "llm/5-Fine-tuning.md",
-    "llm/1-Fundamentals.md",
-    "llm/7-Inference-Optimization.md",
-    "llm/LLM-Wiki.md",
-    "04 - Math/MP.3DRotation.md",
-    "04 - Math/MP.AABB2.md",
-    "Assets/Screenshot 2025-12-19 201845.png",
-    "Assets/Screenshot 2025-12-19 201929.png",
-    "Assets/Screenshot 2025-07-26 150515.png",
     "Assets/UnrealEngine/UE.UKismetSystemLibrary.FlipFlop_01.png",
     "Assets/UnrealEngine/UE.MetaSound_02.png",
     "Assets/UnrealEngine/UE.MetaSound_01.png",
     "Assets/UnrealEngine/UE.UKismetSystemLibrary.Quit_01.png",
     "Assets/UnrealEngine/UE.ProjectSettings.Packaging_01.png",
     "Assets/UnrealEngine/UE.APlayerController.SetInputModeGameOnly_01.png",
-    "Assets/UnrealEngine/UE.APlayerController.SetInputModeUIOnly_01.png",
     "Concept/Concept.D3D11.Canvas.canvas",
     "Untitled.canvas",
     "_temp_/Material.canvas",

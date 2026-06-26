@@ -1,3 +1,0 @@
-# UEnhancedInputComponent
-
-Type: Class

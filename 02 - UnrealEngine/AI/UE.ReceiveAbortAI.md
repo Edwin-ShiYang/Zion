@@ -1,3 +1,0 @@
----
-Class: "[[UBTTask_BlueprintBase]]"
----

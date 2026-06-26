@@ -1,3 +1,0 @@
-# UKismetSystemLibrary
-
-Type: Class

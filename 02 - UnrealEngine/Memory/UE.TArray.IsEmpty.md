@@ -1,5 +1,0 @@
-# IsEmpty
-
-```cpp
-OverlappingActors.IsEmpty();
-```

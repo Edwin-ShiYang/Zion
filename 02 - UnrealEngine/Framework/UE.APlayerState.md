@@ -1,2 +1,0 @@
-- Player State focuses on a specific player
-- - Accessible on Client and Server

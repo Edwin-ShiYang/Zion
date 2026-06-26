@@ -1,1 +1,0 @@
-# SizeSquared2D

@@ -1,12 +1,12 @@
 ---
 type: index
-last_updated: 2026-05-25
+last_updated: 2026-06-25
 ---
 
 # 📚 Wiki Index
 
 > 本文件由 LLM 自动维护。它是整个 Wiki 的目录，按类型组织。
-> 操作规范见 [[CLAUDE]]。
+> 操作规范见 [[CLAUDE]]；通用 Agent 规范见 [[AGENTS]]。
 
 ---
 
@@ -17,7 +17,7 @@ last_updated: 2026-05-25
 | [[#-summaries-源摘要]] | 每个 raw 源对应一篇摘要 | 0 |
 | [[#-concepts-概念]] | 抽象概念、技术、方法 | - |
 | [[#-entities-实体]] | 人、组织、项目、产品 | 0 |
-| [[#-syntheses-综合分析]] | 跨源对比、深度回答 | 0 |
+| [[#-syntheses-综合分析]] | 跨源对比、深度回答 | 1 |
 | [[#-已有领域笔记]] | 用户预先积累的深度笔记 | 7+ |
 
 ---
@@ -64,7 +64,7 @@ _（暂无——会随着源摄取自动建立）_
 
 > 位于 `wiki/syntheses/`。跨源对比、深度回答、个人见解。
 
-_（暂无——通过「Query」时归档有价值的回答）_
+- [[wiki/syntheses/knowledge-iteration-system-for-zion|Zion 知识迭代系统]] — 基于当前 Vault 结构定制的 LLM 维护流程、页面分层、日常命令与演进路线。
 
 ---
 
@@ -94,6 +94,14 @@ _（暂无——通过「Query」时归档有价值的回答）_
 ### 📋 其他
 - [[Cheatsheet]] — 备忘清单
 - [[Perforce]] — 版本控制
+
+---
+
+## 🧭 Control Plane（系统规范）
+
+- [[AGENTS|AGENTS.md]] — 通用 LLM Agent 操作手册，适配 Codex / Claudian / 其他 Agent。
+- [[CLAUDE|CLAUDE.md]] — Claude Code 版本 Wiki Schema。
+- [[log|log.md]] — 时间日志。
 
 ---
 

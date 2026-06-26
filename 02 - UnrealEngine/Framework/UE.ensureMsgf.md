@@ -1,3 +1,0 @@
-# ensureMsgf
-
-Type: Macro

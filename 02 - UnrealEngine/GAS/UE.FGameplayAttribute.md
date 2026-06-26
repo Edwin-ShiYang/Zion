@@ -1,3 +1,0 @@
-# FGameplayAttribute
-
-Type: Struct

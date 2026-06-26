@@ -1,4 +1,0 @@
----
-Category: Property
-Class: "[[UProjectileMovementComponent]]"
----

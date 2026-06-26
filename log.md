@@ -12,6 +12,14 @@ created: 2026-05-25
 
 ---
 
+## [2026-06-25] meta | Zion 知识迭代系统 v1.1
+
+- 新增 [[AGENTS]]：面向 Codex / Claudian / 通用 LLM Agent 的 Vault 维护手册。
+- 新增 [[wiki/syntheses/knowledge-iteration-system-for-zion|Zion 知识迭代系统]]：结合当前 UE、C++、D3D11、Rendering、Animation、Math 笔记结构，定义 Source Summary / Atomic Note / Domain Synthesis / Entity Page 四类知识单元。
+- 更新 [[index]]：加入 Control Plane 与新的 synthesis 条目。
+
+---
+
 ## [2026-05-25] meta | Wiki 框架初始化
 
 - 建立三层架构（raw / wiki / index+log）

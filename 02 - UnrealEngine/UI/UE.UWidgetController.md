@@ -1,3 +1,0 @@
-# UWidgetController
-
-Type: Class

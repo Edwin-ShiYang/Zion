@@ -1,5 +1,5 @@
 
-![[Assets/Math/MP.Vec2.GetRotatedBy90Degrees_01.png| center | 800]]
+![[MP.Vec2.GetRotatedBy90Degrees_01.png| center | 800]]
 
 ```c++
 Vec2 const  Vec2::GetRotatedBy90Degrees() const

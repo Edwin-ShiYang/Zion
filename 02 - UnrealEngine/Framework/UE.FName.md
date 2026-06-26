@@ -1,3 +1,0 @@
-# FName
-
-Type: Class

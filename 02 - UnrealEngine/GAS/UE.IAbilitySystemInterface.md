@@ -1,5 +1,0 @@
-# IAbilitySystemInterface
-
-Type: Interface
-
-[IAbilitySystemInterface](IAbilitySystemInterface/IAbilitySystemInterface%201878d590ff388055a81bef908530111a.csv)

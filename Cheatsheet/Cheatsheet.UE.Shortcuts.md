@@ -1,6 +1,0 @@
-- F2: Rename
-- Alt + P: Play in Editor
-- 3 + Left Mouse: Vector 3
-- Ctrl + Shift + W: Application Scale
-- F7: Compile Blueprint
-- Ctrl + Tab

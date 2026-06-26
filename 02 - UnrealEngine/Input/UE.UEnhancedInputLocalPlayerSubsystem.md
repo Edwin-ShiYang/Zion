@@ -1,3 +1,0 @@
-# UEnhancedInputLocalPlayerSubsystem
-
-Type: Class

@@ -1,5 +1,0 @@
-# MakeRandomColor
-
-```cpp
-FColor::MakeRandomColor()
-```
