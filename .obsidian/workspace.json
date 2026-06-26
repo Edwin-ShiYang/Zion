@@ -13,20 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "animation/Skinning.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Skinning"
-            }
-          },
-          {
-            "id": "cb8aae342d0031a8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "thesis/reference-scout/2026-06-25.md",
                 "mode": "preview",
                 "source": true
@@ -35,8 +21,7 @@
               "title": "2026-06-25"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 283
+    "width": 269
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -209,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1021
+    "width": 1355
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,7 +209,7 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "cb8aae342d0031a8",
+  "active": "ca3ca409eee60f8f",
   "lastOpenFiles": [
     "animation/Skinning.md",
     "thesis/reference-scout/2026-06-25.md",

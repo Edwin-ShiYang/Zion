@@ -14,9 +14,9 @@ created: 2026-05-25
 
 ## [2026-06-25] query+archive | Thesis reference scout
 
-- ???? thesis reference scout?[[thesis/reference-scout/2026-06-25]]
-- ???Animation-Driven Third Person Melee Combat?
-- ?????game feel?impact feel?motion matching?behavior trees?game AI?utility AI?
+- 归档今日 thesis reference scout：[[thesis/reference-scout/2026-06-25]]
+- 主题：Animation-Driven Third Person Melee Combat。
+- 覆盖方向：game feel、impact feel、motion matching、behavior trees、game AI、utility AI。
 
 ---
 
