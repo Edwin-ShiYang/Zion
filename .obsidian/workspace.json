@@ -194,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1355
+    "width": 1226
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -211,8 +211,9 @@
   },
   "active": "ca3ca409eee60f8f",
   "lastOpenFiles": [
-    "animation/Skinning.md",
+    "thesis/reference-scout/2026-06-27.md",
     "thesis/reference-scout/2026-06-25.md",
+    "animation/Skinning.md",
     "thesis/reference-scout",
     "thesis",
     "raw/README.md",
@@ -246,7 +247,6 @@
     "wiki/syntheses/_TEMPLATE.md",
     "wiki/entities/_TEMPLATE.md",
     "wiki/summaries/_TEMPLATE.md",
-    "wiki/README.md",
     "raw/README.md.tmp.1776.7e2fe981a336",
     "log.md.tmp.1776.f8a326cb52e3",
     "CLAUDE.md.tmp.1776.1273f3939cf3",

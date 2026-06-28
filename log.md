@@ -12,6 +12,14 @@ created: 2026-05-25
 
 ---
 
+## [2026-06-27] query+archive | Thesis reference scout
+
+- 归档今日 build-first thesis reference scout：[[thesis/reference-scout/2026-06-27]]
+- 主题：Animation-Driven Third Person Melee Combat。
+- 重点：UE Root Motion、Animation Notifies、Traces、Behavior Tree、fighting game AI、game feel、Soulslike challenge。
+
+---
+
 ## [2026-06-25] query+archive | Thesis reference scout
 
 - 归档今日 thesis reference scout：[[thesis/reference-scout/2026-06-25]]

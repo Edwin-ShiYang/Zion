@@ -4,8 +4,8 @@
   "title": "A pattern for building personal knowledge bases us...",
   "titleGenerationStatus": "failed",
   "createdAt": 1782431200052,
-  "updatedAt": 1782434831539,
-  "lastResponseAt": 1782434831539,
+  "updatedAt": 1782615937726,
+  "lastResponseAt": 1782615937726,
   "sessionId": "019f013f-3ffe-7280-8fd5-55c3ba6100b8",
   "providerState": {
     "threadId": "019f013f-3ffe-7280-8fd5-55c3ba6100b8",
@@ -13,13 +13,13 @@
     "transcriptRootPath": "C:\\Users\\Yang Shi\\.codex\\sessions"
   },
   "usage": {
-    "inputTokens": 105763,
+    "inputTokens": 154515,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 104832,
+    "cacheReadInputTokens": 153472,
     "contextWindow": 258400,
     "contextWindowIsAuthoritative": true,
-    "contextTokens": 105763,
-    "percentage": 41,
+    "contextTokens": 154515,
+    "percentage": 60,
     "model": "gpt-5.5"
   }
 }
