@@ -12,6 +12,13 @@ created: 2026-05-25
 
 ---
 
+## [2026-06-28] query+archive | Z-Aligned Capsule Overlap
+
+- 归档 collision 学习笔记：[[04 - Math/Collision.Z-Aligned-Capsule-Overlap]]
+- 主题：Unreal-style capsule half height、bone start/end、Z-aligned capsule overlap、kissing 不算 overlap。
+
+---
+
 ## [2026-06-27] query+archive | Thesis reference scout
 
 - 归档今日 build-first thesis reference scout：[[thesis/reference-scout/2026-06-27]]

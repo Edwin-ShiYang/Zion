@@ -89,7 +89,12 @@
     "boss-ai": 77,
     "game-feel": 78,
     "build-first": 79,
-    "unreal": 80
+    "unreal": 80,
+    "collision": 81,
+    "capsule": 82,
+    "character-controller": 83,
+    "math": 84,
+    "game-dev": 85
   },
   "_version": 3
 }

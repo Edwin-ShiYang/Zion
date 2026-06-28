@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "2026-06-25"
             }
+          },
+          {
+            "id": "fc969bc9591d3d31",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "04 - Math/Collision.Z-Aligned-Capsule-Overlap.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Collision.Z-Aligned-Capsule-Overlap"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -194,7 +209,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 1226
+    "width": 1462
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,10 +224,11 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "8429eb866f7f4a91",
+  "active": "ca3ca409eee60f8f",
   "lastOpenFiles": [
-    "thesis/reference-scout/2026-06-27.md",
     "thesis/reference-scout/2026-06-25.md",
+    "04 - Math/Collision.Z-Aligned-Capsule-Overlap.md",
+    "thesis/reference-scout/2026-06-27.md",
     "animation/Skinning.md",
     "thesis/reference-scout",
     "thesis",
@@ -246,7 +262,6 @@
     "log.md.tmp.1776.be43c25a1b7b",
     "wiki/syntheses/_TEMPLATE.md",
     "wiki/entities/_TEMPLATE.md",
-    "wiki/summaries/_TEMPLATE.md",
     "raw/README.md.tmp.1776.7e2fe981a336",
     "log.md.tmp.1776.f8a326cb52e3",
     "CLAUDE.md.tmp.1776.1273f3939cf3",
