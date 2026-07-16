@@ -94,7 +94,16 @@
     "capsule": 82,
     "character-controller": 83,
     "math": 84,
-    "game-dev": 85
+    "game-dev": 85,
+    "learning": 86,
+    "reading": 87,
+    "workflow": 88,
+    "physics": 89,
+    "movement": 90,
+    "vector": 91,
+    "cplusplus": 92,
+    "engine": 93,
+    "post-process": 94
   },
   "_version": 3
 }

@@ -86,3 +86,22 @@ created: 2026-05-25
 - **新建** [[03 - D3D11/D3D11.HLSL-FX-Structure]] — FX 文件结构、数据流全景、UV 翻转原因
 
 <!-- 新条目追加在此分隔线下方 ↓ -->
+
+## [2026-07-03] refine | 阅读 + 学习模式
+
+- 新增 [[wiki/syntheses/reading-learning-mode]]：定义阅读 + 学习模式的触发方式、讲解结构、学习深度档位与归档规则。
+- 更新 [[AGENTS]]：加入 `3.5 阅读 + 学习模式`，作为之后阅读书籍、文章、课堂字幕、代码文档时的默认工作流。
+- 更新 [[index]]：登记该综合工作流页面。
+
+## [2026-07-04] query+archive | Position / Velocity / Speed / Displacement
+
+- 归档阅读 [[raw/books/Game Physics Engine Development.pdf]] 时整理出的 movement / physics integration 基础。
+- 新增 [[04 - Math/Physics.Position-Velocity-Speed-Displacement]]。
+- 核心三行：`velocity = direction * speed`、`displacement = velocity * deltaSeconds`、`newPosition = oldPosition + displacement`。
+- 更新 [[index]]。
+
+## [2026-07-14] query+archive | Built-in raw shader 与 inline 变量
+
+- 新增 [[rendering/BuiltIn-Raw-Shader-And-Inline-Variable]]。
+- 主题：Tone Mapping 这类 engine-level post-process shader 可以作为 built-in raw shader source；header 中定义全局 shader source 时应使用 `inline` 避免 multiple definition。
+- 更新 [[index]]。

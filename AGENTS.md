@@ -126,6 +126,27 @@ API 卡片优先补：签名、作用、参数、返回值、最小示例、常�
 
 Lint 默认只给报告；除非用户要求，不直接批量修改。
 
+### 3.5 阅读 + 学习模式
+
+当用户说“阅读模式”“学习模式”“阅读 + 学习模式”“带我学”，或给出当前阅读文件 / 选中文本时，进入该模式。
+
+目标不是简单总结，而是让用户真正学会，并把有长期价值的内容沉淀进 Vault。
+
+默认流程：
+
+1. 确认阅读对象：优先使用 `<current_note>`、`<editor_selection>`、用户给出的 `[[wiki-link]]` 或 `raw/` 文件。
+2. 判断学习深度：
+   - Level 1：快速理解。
+   - Level 2：学会并能用（默认）。
+   - Level 3：深挖到可实现 / 可写进 thesis。
+3. 用中文讲解，技术名词保留英文。
+4. 解释顺序：一句话直觉 → 核心概念 → 逐段解释 → 游戏开发例子 → 实现视角 → 常见坑 → 检查问题。
+5. 如果内容属于 game dev，优先连接到 engine、combat、animation、AI、physics、rendering、shader、math。
+6. 如果材料来自 Unreal / Unity / Godot，优先抽象出 engine-agnostic 原理，而不是停留在具体编辑器操作。
+7. 若答案有长期价值，建议归档；用户同意后写入对应领域页、`wiki/summaries/` 或 `wiki/syntheses/`。
+
+详细规范见 [[wiki/syntheses/reading-learning-mode]]。
+
 ---
 
 ## 4. 写作规范
