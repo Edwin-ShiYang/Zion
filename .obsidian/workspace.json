@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rendering/Deferred-Rendering.md",
+                "file": "03 - D3D11/D3D11.HLSL-FX-Structure.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Deferred-Rendering"
+              "title": "D3D11.HLSL-FX-Structure"
             }
           }
         ]
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 344
+    "width": 361
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -135,7 +135,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "per vertex",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -147,22 +147,12 @@
             }
           },
           {
-            "id": "ca3ca409eee60f8f",
-            "type": "leaf",
-            "state": {
-              "type": "claudian-view",
-              "state": {},
-              "icon": "bot",
-              "title": "Claudian"
-            }
-          },
-          {
             "id": "d6610321fe33b0d6",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "rendering/Deferred-Rendering.md",
+                "file": "03 - D3D11/D3D11.HLSL-FX-Structure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -172,7 +162,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Deferred-Rendering"
+              "title": "Backlinks for D3D11.HLSL-FX-Structure"
             }
           },
           {
@@ -188,13 +178,23 @@
               "icon": "links-going-out",
               "title": "Outgoing links from Deferred-Rendering"
             }
+          },
+          {
+            "id": "35407577fdf0fa94",
+            "type": "leaf",
+            "state": {
+              "type": "claudian-view",
+              "state": {},
+              "icon": "bot",
+              "title": "Claudian"
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 1343
+    "width": 570
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,8 +209,14 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "ca3ca409eee60f8f",
+  "active": "35407577fdf0fa94",
   "lastOpenFiles": [
+    "03 - D3D11/D3D11.Draw.md",
+    "03 - D3D11/D3D11.Buffer.md",
+    "03 - D3D11/D3D11.ConstantBuffer.md",
+    "03 - D3D11/D3D11.BackBuffer.md",
+    "03 - D3D11/D3D11.ClearScreen.md",
+    "rendering/Deferred-Rendering.md",
     "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
     "rendering/Blinn-Phong-Lighting.md",
     "animation/Skinning.md",
@@ -225,7 +231,6 @@
     "thesis/reference-scout/2026-06-27.md",
     "thesis/reference-scout",
     "thesis",
-    "rendering/Deferred-Rendering.md",
     "rendering/Portal-Rendering.md",
     "wiki/concepts/_TEMPLATE.md",
     "AGENTS.md",
@@ -236,15 +241,10 @@
     "Perforce.md",
     "Cheatsheet/Cheatsheet.Markdown.md",
     "wiki/syntheses/knowledge-iteration-system-for-zion.md",
-    "temp.md",
-    "rendering/Render-Target.md",
-    "Cheatsheet/Cheatsheet.UE.Shortcuts.md",
     "00 - Assets/Math/MP.AABB2.GetDimensions_01.png",
     "Assets/Screenshot 2025-07-26 150515.png",
     "Assets/Screenshot 2025-12-19 201845.png",
     "Assets/Screenshot 2025-12-19 201929.png",
-    "02 - UnrealEngine/AI/UE.AAIController.GetBlackboardComponent.md",
-    "03 - D3D11/D3D11.ConstantBuffer.md",
     "03 - D3D11/D3D11.Canvas.canvas",
     "index.md.tmp.1776.723ef31753b1",
     "rendering",
