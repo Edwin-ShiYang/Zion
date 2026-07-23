@@ -103,7 +103,10 @@
     "vector": 91,
     "cplusplus": 92,
     "engine": 93,
-    "post-process": 94
+    "post-process": 94,
+    "depth-buffer": 95,
+    "stencil-buffer": 96,
+    "descriptor": 97
   },
   "_version": 3
 }

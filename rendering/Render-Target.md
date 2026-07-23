@@ -48,6 +48,73 @@ Render Target **本质就是一张 Texture**，只是它有双重身份：
 
 ---
 
+## `DXGI_FORMAT_R16G16B16A16_FLOAT`
+
+这个格式表示一张 RGBA texture，每个像素有 4 个通道：
+
+```text
+R = Red
+G = Green
+B = Blue
+A = Alpha
+```
+
+每个通道是 16-bit float：
+
+```text
+R16 + G16 + B16 + A16 = 64 bits = 8 bytes / pixel
+```
+
+它和 `UNORM` 格式最大的区别是：**FLOAT 不会被限制在 `0.0 ~ 1.0`**。
+
+```text
+UNORM = unsigned normalized integer，通常映射到 0.0 ~ 1.0
+FLOAT = floating point number，可以表示超过 1.0 的值
+```
+
+例如普通颜色格式：
+
+```cpp
+desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+```
+
+它每个通道是 8-bit normalized integer：
+
+```text
+0   -> 0.0
+255 -> 1.0
+```
+
+如果光照计算得到 `4.0`，写入 `UNORM` render target 时会被夹到 `1.0`，亮度细节丢失。
+
+而 HDR render target 常用：
+
+```cpp
+desc.Format = DXGI_FORMAT_R16G16B16A16_FLOAT;
+```
+
+它可以先保存超过 1 的光照结果：
+
+```text
+0.0
+0.5
+1.0
+2.0
+4.0
+10.0
+```
+
+后面再通过 tone mapping 把 HDR 值压回屏幕能显示的 `0.0 ~ 1.0`。
+
+常见用途：
+
+- HDR lighting buffer
+- Bloom 前的高亮颜色
+- Deferred Rendering 的 GBuffer 中间数据
+- 需要负数或超过 `1.0` 的中间计算结果
+
+---
+
 ## D3D11 创建 RT
 
 ```cpp
@@ -55,8 +122,8 @@ D3D11_TEXTURE2D_DESC desc = {};
 desc.Width     = 1920;
 desc.Height    = 1080;
 desc.Format    = DXGI_FORMAT_R8G8B8A8_UNORM;
-desc.BindFlags = D3D11_BIND_RENDER_TARGET       // 可写
-               | D3D11_BIND_SHADER_RESOURCE;    // 可读
+desc.BindFlags = D3D11_BIND_RENDER_TARGET       // Writable as a render target
+               | D3D11_BIND_SHADER_RESOURCE;    // Readable as a shader resource
 desc.MipLevels = 1;
 desc.ArraySize = 1;
 desc.SampleDesc.Count = 1;
@@ -64,9 +131,9 @@ desc.SampleDesc.Count = 1;
 ID3D11Texture2D* tex = nullptr;
 device->CreateTexture2D(&desc, nullptr, &tex);
 
-// 两个 View，对应两种用途
-ID3D11RenderTargetView*   rtv = nullptr;  // 写
-ID3D11ShaderResourceView* srv = nullptr;  // 读
+// Two views for two different uses
+ID3D11RenderTargetView*   rtv = nullptr;  // Write
+ID3D11ShaderResourceView* srv = nullptr;  // Read
 device->CreateRenderTargetView(tex, nullptr, &rtv);
 device->CreateShaderResourceView(tex, nullptr, &srv);
 ```
@@ -104,7 +171,7 @@ ID3D11RenderTargetView* rtvs[] = {
     rtv_emissive,  // slot 3 → SV_Target3
 };
 context->OMSetRenderTargets(4, rtvs, depthStencilView);
-// 一次 Draw Call，PS 同时写入 4 张纹理
+// One draw call; the pixel shader writes to four textures at once
 ```
 
 ### HLSL 对应写法

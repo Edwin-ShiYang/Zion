@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 - D3D11/D3D11.HLSL-FX-Structure.md",
+                "file": "rendering/Render-Target.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "D3D11.HLSL-FX-Structure"
+              "title": "Render-Target"
             }
           }
         ]
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 361
+    "width": 665
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -120,13 +120,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "04 - Math/Collision.Z-Aligned-Capsule-Overlap.md",
+                "file": "03 - D3D11/D3D11.HLSL-FX-Structure.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Collision.Z-Aligned-Capsule-Overlap"
+              "title": "Outline of D3D11.HLSL-FX-Structure"
             }
           },
           {
@@ -171,16 +171,16 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "rendering/Deferred-Rendering.md",
+                "file": "03 - D3D11/D3D11.HLSL-FX-Structure.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Deferred-Rendering"
+              "title": "Outgoing links from D3D11.HLSL-FX-Structure"
             }
           },
           {
-            "id": "35407577fdf0fa94",
+            "id": "082fd7aa2513e09d",
             "type": "leaf",
             "state": {
               "type": "claudian-view",
@@ -194,7 +194,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 570
+    "width": 272,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,18 +210,29 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "35407577fdf0fa94",
+  "active": "b7d7b430a8371fe4",
   "lastOpenFiles": [
-    "03 - D3D11/D3D11.Draw.md",
-    "03 - D3D11/D3D11.Buffer.md",
-    "03 - D3D11/D3D11.ConstantBuffer.md",
-    "03 - D3D11/D3D11.BackBuffer.md",
-    "03 - D3D11/D3D11.ClearScreen.md",
+    "03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC.md",
+    "rendering/Portal-Rendering.md",
     "rendering/Deferred-Rendering.md",
     "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
     "rendering/Blinn-Phong-Lighting.md",
-    "animation/Skinning.md",
+    "log.md",
+    "Perforce.md",
+    "LLM Wiki.md",
+    "index.md",
+    "CLAUDE.md",
+    "AGENTS.md",
     "2026-07-11.md",
+    "03 - D3D11/D3D11.DepthBuffer.md",
+    "03 - D3D11/D3D11.Buffer.md",
+    "03 - D3D11/D3D11.Clean up Intermediate.md",
+    "03 - D3D11/D3D11.BackBuffer.md",
+    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
+    "03 - D3D11/D3D11.Draw.md",
+    "03 - D3D11/D3D11.ConstantBuffer.md",
+    "03 - D3D11/D3D11.ClearScreen.md",
+    "animation/Skinning.md",
     "raw/books/Game Physics Engine Development.pdf",
     "04 - Math/Physics.Position-Velocity-Speed-Displacement.md",
     "wiki/syntheses/reading-learning-mode.md",
@@ -228,19 +240,8 @@
     "raw/books",
     "04 - Math/Collision.Z-Aligned-Capsule-Overlap.md",
     "thesis/reference-scout/2026-06-25.md",
-    "thesis/reference-scout/2026-06-27.md",
     "thesis/reference-scout",
     "thesis",
-    "rendering/Portal-Rendering.md",
-    "wiki/concepts/_TEMPLATE.md",
-    "AGENTS.md",
-    "log.md",
-    "CLAUDE.md",
-    "index.md",
-    "LLM Wiki.md",
-    "Perforce.md",
-    "Cheatsheet/Cheatsheet.Markdown.md",
-    "wiki/syntheses/knowledge-iteration-system-for-zion.md",
     "00 - Assets/Math/MP.AABB2.GetDimensions_01.png",
     "Assets/Screenshot 2025-07-26 150515.png",
     "Assets/Screenshot 2025-12-19 201845.png",

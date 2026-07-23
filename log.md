@@ -105,3 +105,44 @@ created: 2026-05-25
 - 新增 [[rendering/BuiltIn-Raw-Shader-And-Inline-Variable]]。
 - 主题：Tone Mapping 这类 engine-level post-process shader 可以作为 built-in raw shader source；header 中定义全局 shader source 时应使用 `inline` 避免 multiple definition。
 - 更新 [[index]]。
+
+## [2026-07-23] query+archive | D3D11 Depth Buffer / Depth Stencil Texture
+
+- 整理代码片段中 `D3D11_TEXTURE2D_DESC` 创建 depth-stencil texture 的含义。
+- 丰富 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `DXGI_FORMAT_D24_UNORM_S8_UINT`、`D3D11_BIND_DEPTH_STENCIL`、Texture 与 DepthStencilView 的关系、`OMSetRenderTargets` 绑定流程和常见坑。
+- 更新 [[index]]。
+
+## [2026-07-23] refine | D3D11 descriptor 清零
+
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `D3D11_TEXTURE2D_DESC depthTextureDesc = {};` 为什么要先清零。
+- 重点：避免未显式填写的 `CPUAccessFlags`、`MiscFlags`、`SampleDesc.Quality` 等字段保留随机垃圾值，导致 `CreateTexture2D` 参数组合异常。
+
+## [2026-07-23] refine | D3D11 DepthBuffer 字段解释格式
+
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：将 `D3D11_TEXTURE2D_DESC` 字段解释从表格改为带注释的 C++ code block，方便直接对照代码阅读。
+
+## [2026-07-23] refine | D3D11 code block 单行调用格式
+
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：将 code block 中的多行函数调用改为单行调用，例如 `CreateDepthStencilView(...)`、`OMSetRenderTargets(...)`、`ClearDepthStencilView(...)`。
+- 记录偏好：整理代码笔记时，函数调用参数不要拆成多行，优先写在一行里方便快速阅读。
+
+## [2026-07-23] refine | D24_UNORM_S8_UINT 像素布局
+
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `DXGI_FORMAT_D24_UNORM_S8_UINT` 的每像素布局：32 bits / 4 bytes，其中 24-bit UNORM 用于 depth test，8-bit UINT 用于 stencil test。
+- 补充 depth 与 stencil 的使用时机：depth 解决前后遮挡，stencil 作为整数 mask 控制绘制区域。
+
+## [2026-07-23] refine | R16G16B16A16_FLOAT 与 HDR
+
+- 更新 [[rendering/Render-Target]]：补充 `DXGI_FORMAT_R16G16B16A16_FLOAT` 的含义：RGBA 四通道、每通道 16-bit float、每像素 64 bits / 8 bytes。
+- 重点：`FLOAT` 不像 `UNORM` 一样限制在 `0.0 ~ 1.0`，因此可以保存超过 1 的 HDR 光照值，后续再通过 tone mapping 压回屏幕显示范围。
+
+## [2026-07-23] refine | Code comment language preference
+
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]] 和 [[rendering/Render-Target]]：将 code block 里的 `//` 注释统一改为英文。
+- 记录偏好：以后代码块中的 comment 使用英文；正文解释可以继续使用中文。
+
+## [2026-07-23] query+archive | D3D11_TEXTURE2D_DESC
+
+- 新增 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：单独整理 `D3D11_TEXTURE2D_DESC` 的作用、清零原因、字段解释、`MipLevels`、`Format`、`BindFlags`、depth buffer 示例和 render target 示例。
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：把通用 descriptor 说明链接到新笔记。
+- 更新 [[index]]。

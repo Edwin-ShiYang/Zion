@@ -1,6 +1,6 @@
 ---
 type: index
-last_updated: 2026-06-25
+last_updated: 2026-07-23
 ---
 
 # 📚 Wiki Index
@@ -138,3 +138,5 @@ _（暂无——会随着源摄取自动建立）_
 - [[wiki/syntheses/reading-learning-mode|阅读 + 学习模式]] — 面向游戏开发学习的阅读工作流：直觉、原理、实现、常见坑、检查问题与归档规则。
 - [[04 - Math/Physics.Position-Velocity-Speed-Displacement]] — Game physics movement 基础：`velocity = direction * speed`、`displacement = velocity * deltaSeconds`、`newPosition = oldPosition + displacement`。
 - [[rendering/BuiltIn-Raw-Shader-And-Inline-Variable]] — engine 内置 raw shader source 的用法，以及 header 全局变量为什么要用 `inline`。
+- [[03 - D3D11/D3D11.DepthBuffer]] — D3D11 depth-stencil texture 创建流程：`CreateTexture2D`、`DXGI_FORMAT_D24_UNORM_S8_UINT`、`CreateDepthStencilView`、`OMSetRenderTargets`。
+- [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]] — D3D11 Texture2D descriptor 字段说明：尺寸、mipmap、format、bind flags、usage、MSAA 与常见创建模式。
