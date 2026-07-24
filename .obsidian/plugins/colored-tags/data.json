@@ -106,7 +106,8 @@
     "post-process": 94,
     "depth-buffer": 95,
     "stencil-buffer": 96,
-    "descriptor": 97
+    "descriptor": 97,
+    "shadow": 98
   },
   "_version": 3
 }

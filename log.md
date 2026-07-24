@@ -146,3 +146,46 @@ created: 2026-05-25
 - 新增 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：单独整理 `D3D11_TEXTURE2D_DESC` 的作用、清零原因、字段解释、`MipLevels`、`Format`、`BindFlags`、depth buffer 示例和 render target 示例。
 - 更新 [[03 - D3D11/D3D11.DepthBuffer]]：把通用 descriptor 说明链接到新笔记。
 - 更新 [[index]]。
+
+## [2026-07-23] refine | D3D11 SampleDesc / MSAA
+
+- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 `SampleDesc` 小节，解释 `SampleDesc.Count`、`SampleDesc.Quality`、MSAA、quality level 查询和 render target / depth buffer sample count 匹配规则。
+- 更新 [[03 - D3D11/D3D11.DepthBuffer]]：补充 `depthTextureDesc.SampleDesc.Quality = 0;`。
+
+## [2026-07-23] refine | D3D11 Usage / CPUAccessFlags / MiscFlags
+
+- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 `Usage`、`CPUAccessFlags`、`MiscFlags` 小节，并补强 `BindFlags` 的 RTV + SRV 后处理场景说明。
+- 重点：`D3D11_USAGE_DEFAULT` 是 GPU 正常读写、CPU 不直接访问；`CPUAccessFlags = 0` 表示 CPU 不直接访问；`MiscFlags = 0` 表示无特殊资源行为。
+
+## [2026-07-23] refine | D3D11 image texture mip generation
+
+- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：补充 `MipLevels = 0` 的特殊含义，以及 `D3D11_RESOURCE_MISC_GENERATE_MIPS`、SRV、RTV 配套生成 mipmap 的流程。
+- 新增 image texture 示例：从 `Image` 创建可生成 mipmaps 的 shader texture。
+
+## [2026-07-23] refine | D3D11 mip generation code block style
+
+- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：将 `MipLevels = 0`、`D3D11_RESOURCE_MISC_GENERATE_MIPS`、SRV/RTV 配套关系改写进带英文注释的 `cpp` code block。
+- 记录偏好：这类字段组合说明优先写在 code block 中，方便直接对照代码。
+
+## [2026-07-23] refine | D3D11 UpdateSubresource texture upload
+
+- 更新 [[03 - D3D11/D3D11.Texture]]：新增 `上传图片数据到 Texture` 小节，解释 `rowPitch` 和 `UpdateSubresource(newTexture->m_texture, 0, nullptr, image.GetRawData(), rowPitch, 0)` 的参数对应关系。
+- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：从 image texture 示例链接到 texture upload 小节。
+- 更新 [[index]]。
+
+## [2026-07-23] refine | Bilingual parameter explanations
+
+- 更新 [[03 - D3D11/D3D11.Texture]]：将 `UpdateSubresource` 参数直观解释改为英文语义 + 中文说明的双语形式。
+- 记录偏好：API 参数解释块中，参数意义尽量同时给英文术语和中文解释。
+
+## [2026-07-23] refine | Bilingual API prose
+
+- 更新 [[03 - D3D11/D3D11.Texture]]：将 `UpdateSubresource` 小节的关键说明句改为英文术语 + 中文解释的双语形式。
+- 记录偏好：API 说明正文中的关键句也尽量中英文并列，不只参数块双语。
+
+## [2026-07-23] query+archive | Shadow Map typeless texture / DSV / SRV
+
+- 新增 [[rendering/Shadow-Map]]：整理 shadow map 的核心直觉、shadow pass / main pass、Texture resource / DSV / SRV 三者关系。
+- 重点：shadow map 底层 texture 使用 `DXGI_FORMAT_R24G8_TYPELESS`，写 depth 时 DSV 使用 `DXGI_FORMAT_D24_UNORM_S8_UINT`，shader 读取时 SRV 使用 `DXGI_FORMAT_R24_UNORM_X8_TYPELESS`。
+- 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 Shadow Map 示例并链接到 rendering 笔记。
+- 更新 [[index]]。

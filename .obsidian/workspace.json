@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rendering/Render-Target.md",
+                "file": "03 - D3D11/D3D11.Texture.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Render-Target"
+              "title": "D3D11.Texture"
             }
           }
         ]
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 665
+    "width": 449
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -190,12 +190,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 272,
-    "collapsed": true
+    "width": 272
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -210,9 +209,22 @@
       "realclaudian:Open Claudian": false
     }
   },
-  "active": "b7d7b430a8371fe4",
+  "active": "7965abf3033f6134",
   "lastOpenFiles": [
+    "rendering/Shadow-Map.md",
     "03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC.md",
+    "03 - D3D11/D3D11.IASetPrimitiveTopology.md",
+    "03 - D3D11/D3D11.IASetInputLayout.md",
+    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
+    "03 - D3D11/D3D11.D3D11CreateDeviceAndSwapChain.md",
+    "03 - D3D11/D3D11.Draw.md",
+    "03 - D3D11/D3D11.ID3D11DeviceContext.md",
+    "03 - D3D11/D3D11.Tessellation.md",
+    "03 - D3D11/D3D11.VertexShader.md",
+    "03 - D3D11/D3D11.Rendering.md",
+    "03 - D3D11/D3D11.Rasterizer.md",
+    "03 - D3D11/D3D11.Texture.md",
+    "rendering/Render-Target.md",
     "rendering/Portal-Rendering.md",
     "rendering/Deferred-Rendering.md",
     "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
@@ -225,21 +237,8 @@
     "AGENTS.md",
     "2026-07-11.md",
     "03 - D3D11/D3D11.DepthBuffer.md",
-    "03 - D3D11/D3D11.Buffer.md",
-    "03 - D3D11/D3D11.Clean up Intermediate.md",
-    "03 - D3D11/D3D11.BackBuffer.md",
-    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
-    "03 - D3D11/D3D11.Draw.md",
-    "03 - D3D11/D3D11.ConstantBuffer.md",
-    "03 - D3D11/D3D11.ClearScreen.md",
-    "animation/Skinning.md",
     "raw/books/Game Physics Engine Development.pdf",
-    "04 - Math/Physics.Position-Velocity-Speed-Displacement.md",
-    "wiki/syntheses/reading-learning-mode.md",
-    "raw/README.md",
     "raw/books",
-    "04 - Math/Collision.Z-Aligned-Capsule-Overlap.md",
-    "thesis/reference-scout/2026-06-25.md",
     "thesis/reference-scout",
     "thesis",
     "00 - Assets/Math/MP.AABB2.GetDimensions_01.png",

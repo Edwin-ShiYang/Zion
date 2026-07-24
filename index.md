@@ -75,6 +75,7 @@ _（暂无——会随着源摄取自动建立）_
 
 ### 🖼️ Rendering（渲染）
 - [[rendering/Render-Target|Render Target]] — RT、MRT、像素格式、D3D11 创建方法
+- [[rendering/Shadow-Map|Shadow Map]] — shadow pass / main pass、DSV 写 depth、SRV 读 depth、`DXGI_FORMAT_R24G8_TYPELESS` 与 view format 的关系。
 - [[rendering/Deferred-Rendering|Deferred Rendering]] — Pass 概念、Pass 链、GBuffer、D3D11 完整实现
 - [[rendering/Portal-Rendering|Portal Rendering]] — 传送门原理、递归渲染、斜裁剪面
 
@@ -140,3 +141,5 @@ _（暂无——会随着源摄取自动建立）_
 - [[rendering/BuiltIn-Raw-Shader-And-Inline-Variable]] — engine 内置 raw shader source 的用法，以及 header 全局变量为什么要用 `inline`。
 - [[03 - D3D11/D3D11.DepthBuffer]] — D3D11 depth-stencil texture 创建流程：`CreateTexture2D`、`DXGI_FORMAT_D24_UNORM_S8_UINT`、`CreateDepthStencilView`、`OMSetRenderTargets`。
 - [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]] — D3D11 Texture2D descriptor 字段说明：尺寸、mipmap、format、bind flags、usage、MSAA 与常见创建模式。
+- [[03 - D3D11/D3D11.Texture#上传图片数据到 Texture]] — `UpdateSubresource` 上传 CPU image data 到 GPU texture：`rowPitch`、mip level 0、`GenerateMips`。
+- [[rendering/Shadow-Map]] — shadow map 的 D3D11 resource / DSV / SRV 关系：底层 `R24G8_TYPELESS`，写入 `D24_UNORM_S8_UINT`，读取 `R24_UNORM_X8_TYPELESS`。
