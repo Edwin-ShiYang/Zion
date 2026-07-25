@@ -209,3 +209,11 @@ created: 2026-05-25
 ## [2026-07-25] refine | Post-processing markdown diagram
 
 - 更新 [[rendering/Post-Processing-Pass]]：移除已删除的 canvas 链接，改用 Mermaid markdown 图表示 HDR、Bright、Blur、Tone Mapping、Backbuffer 的数据流。
+
+## [2026-07-25] refine | Post-processing vertical diagram
+
+- 更新 [[rendering/Post-Processing-Pass]]：将 post-processing Mermaid 图从横向 `graph LR` 改为竖向 `graph TD`，方便按 pass 顺序阅读。
+
+## [2026-07-25] refine | Post-processing diagram centering
+
+- 更新 [[rendering/Post-Processing-Pass]]：调整 Mermaid 图结构，让原始 HDR 输入和 bloom 输入汇入居中的 Tone Mapping 节点。

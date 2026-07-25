@@ -11,14 +11,14 @@
             "id": "7965abf3033f6134",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": "rendering/Rendering-Pass-Pipeline.canvas",
-                "bFile": "rendering/Rendering-Pass-Pipeline.canvas",
-                "aRef": ""
+                "file": "rendering/Post-Processing-Pass.md",
+                "mode": "preview",
+                "source": true
               },
-              "icon": "diff",
-              "title": "Diff: Rendering-Pass-Pipeline.canvas"
+              "icon": "lucide-file",
+              "title": "Post-Processing-Pass"
             }
           }
         ]
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 449
+    "width": 524
   },
   "right": {
     "id": "4422b81e3b580ef0",

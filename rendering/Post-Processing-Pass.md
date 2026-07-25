@@ -22,15 +22,16 @@ aliases:
 下面是这套 pass 的数据流图：
 
 ```mermaid
-graph LR
+graph TD
     HDRPass["HDR Pass<br/>Draw scene geometry"] --> HDRTex["m_hdrRenderTexture<br/>Full HDR scene color"]
+    HDRTex --> OriginalInput["Original HDR input<br/>原始场景颜色"]
     HDRTex --> BrightPass["Bright Pass<br/>DrawFullQuad"]
     BrightPass --> BrightTex["m_brightPassTexture<br/>Bright pixels only"]
     BrightTex --> HBlur["Horizontal Blur Pass<br/>DrawFullQuad"]
     HBlur --> HBlurTex["m_horizontalBlurTexture<br/>Horizontal blur result"]
     HBlurTex --> VBlur["Vertical Blur Pass<br/>DrawFullQuad"]
     VBlur --> VBlurTex["m_verticalBlurTexture<br/>Final blurred bloom"]
-    HDRTex --> ToneMap["Tone Mapping Pass<br/>DrawFullQuad"]
+    OriginalInput --> ToneMap["Tone Mapping Pass<br/>DrawFullQuad"]
     VBlurTex --> ToneMap
     ToneMap --> Backbuffer["m_renderTargetView<br/>Backbuffer / screen"]
 ```
