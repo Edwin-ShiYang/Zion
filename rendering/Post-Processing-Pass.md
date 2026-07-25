@@ -21,19 +21,44 @@ aliases:
 
 下面是这套 pass 的数据流图：
 
-```mermaid
-graph TD
-    HDRPass["HDR Pass<br/>Draw scene geometry"] --> HDRTex["m_hdrRenderTexture<br/>Full HDR scene color"]
-    HDRTex --> OriginalInput["Original HDR input<br/>原始场景颜色"]
-    HDRTex --> BrightPass["Bright Pass<br/>DrawFullQuad"]
-    BrightPass --> BrightTex["m_brightPassTexture<br/>Bright pixels only"]
-    BrightTex --> HBlur["Horizontal Blur Pass<br/>DrawFullQuad"]
-    HBlur --> HBlurTex["m_horizontalBlurTexture<br/>Horizontal blur result"]
-    HBlurTex --> VBlur["Vertical Blur Pass<br/>DrawFullQuad"]
-    VBlur --> VBlurTex["m_verticalBlurTexture<br/>Final blurred bloom"]
-    OriginalInput --> ToneMap["Tone Mapping Pass<br/>DrawFullQuad"]
-    VBlurTex --> ToneMap
-    ToneMap --> Backbuffer["m_renderTargetView<br/>Backbuffer / screen"]
+```text
+HDR Pass
+   |
+   v
+m_hdrRenderTexture
+Full HDR scene color / 完整 HDR 场景颜色
+   |
+   v
+Bright Pass
+DrawFullQuad / 提取亮部
+   |
+   v
+m_brightPassTexture
+Bright pixels only / 只保留亮部
+   |
+   v
+Horizontal Blur Pass
+DrawFullQuad / 横向模糊
+   |
+   v
+m_horizontalBlurTexture
+Horizontal blur result / 横向模糊结果
+   |
+   v
+Vertical Blur Pass
+DrawFullQuad / 纵向模糊
+   |
+   v
+m_verticalBlurTexture
+Final blurred bloom / 最终 bloom 光晕
+   |
+   v
+Tone Mapping Pass  <--- also reads m_hdrRenderTexture / 同时读取原始 HDR 场景
+DrawFullQuad / HDR + bloom -> screen color
+   |
+   v
+m_renderTargetView
+Backbuffer / screen / 最终显示到屏幕
 ```
 
 ---

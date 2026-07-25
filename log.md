@@ -217,3 +217,7 @@ created: 2026-05-25
 ## [2026-07-25] refine | Post-processing diagram centering
 
 - 更新 [[rendering/Post-Processing-Pass]]：调整 Mermaid 图结构，让原始 HDR 输入和 bloom 输入汇入居中的 Tone Mapping 节点。
+
+## [2026-07-25] refine | Post-processing text diagram
+
+- 更新 [[rendering/Post-Processing-Pass]]：将 Mermaid 图改为稳定的 text diagram，避免 Obsidian Mermaid 自动布局导致视觉不居中。
