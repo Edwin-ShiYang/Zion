@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03 - D3D11/D3D11.Texture.md",
+                "file": "rendering/Portal-Rendering.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "D3D11.Texture"
+              "title": "Portal-Rendering"
             }
           }
         ]
@@ -211,6 +211,10 @@
   },
   "active": "7965abf3033f6134",
   "lastOpenFiles": [
+    "rendering/Deferred-Rendering.md",
+    "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
+    "rendering/Blinn-Phong-Lighting.md",
+    "03 - D3D11/D3D11.Texture.md",
     "rendering/Shadow-Map.md",
     "03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC.md",
     "03 - D3D11/D3D11.IASetPrimitiveTopology.md",
@@ -223,12 +227,8 @@
     "03 - D3D11/D3D11.VertexShader.md",
     "03 - D3D11/D3D11.Rendering.md",
     "03 - D3D11/D3D11.Rasterizer.md",
-    "03 - D3D11/D3D11.Texture.md",
     "rendering/Render-Target.md",
     "rendering/Portal-Rendering.md",
-    "rendering/Deferred-Rendering.md",
-    "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
-    "rendering/Blinn-Phong-Lighting.md",
     "log.md",
     "Perforce.md",
     "LLM Wiki.md",

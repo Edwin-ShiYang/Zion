@@ -189,3 +189,13 @@ created: 2026-05-25
 - 重点：shadow map 底层 texture 使用 `DXGI_FORMAT_R24G8_TYPELESS`，写 depth 时 DSV 使用 `DXGI_FORMAT_D24_UNORM_S8_UINT`，shader 读取时 SRV 使用 `DXGI_FORMAT_R24_UNORM_X8_TYPELESS`。
 - 更新 [[03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC]]：新增 Shadow Map 示例并链接到 rendering 笔记。
 - 更新 [[index]]。
+
+## [2026-07-24] refine | SamplerMode::BILINEAR_WRAP
+
+- 更新 [[03 - D3D11/D3D11.Texture]]：补充 `SamplerMode::BILINEAR_WRAP` 的含义：bilinear filtering + wrap address mode。
+- 更新 [[rendering/Shadow-Map]]：补充 shadow map 第一版更适合 `POINT_CLAMP`，不建议使用 `BILINEAR_WRAP`，避免 UV 越界采到另一侧 depth。
+
+## [2026-07-25] canvas | Rendering pass pipeline
+
+- 新增 [[rendering/Rendering-Pass-Pipeline.canvas]]：用 Obsidian Canvas 梳理 HDR pass、Bright pass、Horizontal Blur、Vertical Blur、Tone Mapping、Backbuffer 的读写关系。
+- 重点：`DrawFullQuad()` 是 post-process trigger；`End*Pass()` 主要解绑 RTV/SRV，不是保存数据。

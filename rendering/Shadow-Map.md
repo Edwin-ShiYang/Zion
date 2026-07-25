@@ -207,6 +207,31 @@ Shadow map resolution 不一定要等于 window size。常见做法是固定正�
 
 ---
 
+## Shadow Map Sampler
+
+Shadow map 第一版通常不要用 `SamplerMode::BILINEAR_WRAP`。
+
+```text
+BILINEAR_WRAP
+= bilinear filtering + wrap address mode / 平滑采样 + UV 越界重复
+```
+
+Shadow map 的 UV 越界时不应该重复采样另一边的 depth，所以第一版通常用：
+
+```cpp
+// First version: avoid repeated depth values outside the shadow map
+SamplerMode shadowSamplerMode = SamplerMode::POINT_CLAMP;
+```
+
+```text
+POINT = read one depth texel directly / 直接读一个 depth texel
+CLAMP = clamp UV outside 0..1 to the edge / UV 越界时夹到边缘，不重复平铺
+```
+
+后面要做 softer shadow 时，可以再考虑 `ComparisonSampler` 或 PCF，而不是直接用 ordinary `BILINEAR_WRAP`。
+
+---
+
 ## 常见坑
 
 - 底层 texture 用 `DXGI_FORMAT_D24_UNORM_S8_UINT`，然后又想创建 SRV：应改成 typeless resource + typed views。
@@ -214,6 +239,7 @@ Shadow map resolution 不一定要等于 window size。常见做法是固定正�
 - 忘了绑定 `D3D11_BIND_SHADER_RESOURCE`：后面无法创建 SRV。
 - 忘了绑定 `D3D11_BIND_DEPTH_STENCIL`：后面无法创建 DSV。
 - shadow pass 结束后还把 shadow map 作为 DSV 绑定，同时又在 pixel shader 里读它：同一资源不能同时写和读，main pass 前要解除冲突绑定。
+- 对 shadow map 使用 `BILINEAR_WRAP`：UV 越界会重复采样另一侧 depth，第一版优先用 `POINT_CLAMP`。
 
 ---
 
