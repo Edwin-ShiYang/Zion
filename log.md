@@ -199,3 +199,13 @@ created: 2026-05-25
 
 - 新增 [[rendering/Rendering-Pass-Pipeline.canvas]]：用 Obsidian Canvas 梳理 HDR pass、Bright pass、Horizontal Blur、Vertical Blur、Tone Mapping、Backbuffer 的读写关系。
 - 重点：`DrawFullQuad()` 是 post-process trigger；`End*Pass()` 主要解绑 RTV/SRV，不是保存数据。
+
+## [2026-07-25] query+archive | Post-processing pass / DrawFullQuad
+
+- 新增 [[rendering/Post-Processing-Pass]]：整理 Bright Pass、Horizontal Blur、Vertical Blur、Tone Mapping 的 texture-to-texture 数据流。
+- 重点：需要 `DrawFullQuad()` 的场景是逐像素处理已有 texture；正常画场景、shadow pass、mesh/material render 不用 full quad。
+- 更新 [[index]]。
+
+## [2026-07-25] refine | Post-processing markdown diagram
+
+- 更新 [[rendering/Post-Processing-Pass]]：移除已删除的 canvas 链接，改用 Mermaid markdown 图表示 HDR、Bright、Blur、Tone Mapping、Backbuffer 的数据流。

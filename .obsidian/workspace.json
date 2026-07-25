@@ -11,14 +11,14 @@
             "id": "7965abf3033f6134",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "rendering/Portal-Rendering.md",
-                "mode": "preview",
-                "source": true
+                "aFile": "rendering/Rendering-Pass-Pipeline.canvas",
+                "bFile": "rendering/Rendering-Pass-Pipeline.canvas",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "Portal-Rendering"
+              "icon": "diff",
+              "title": "Diff: Rendering-Pass-Pipeline.canvas"
             }
           }
         ]
@@ -211,6 +211,10 @@
   },
   "active": "7965abf3033f6134",
   "lastOpenFiles": [
+    "rendering/Render-Target.md",
+    "rendering/Rendering-Pass-Pipeline.canvas",
+    "rendering/Post-Processing-Pass.md",
+    "rendering/Portal-Rendering.md",
     "rendering/Deferred-Rendering.md",
     "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
     "rendering/Blinn-Phong-Lighting.md",
@@ -227,16 +231,12 @@
     "03 - D3D11/D3D11.VertexShader.md",
     "03 - D3D11/D3D11.Rendering.md",
     "03 - D3D11/D3D11.Rasterizer.md",
-    "rendering/Render-Target.md",
-    "rendering/Portal-Rendering.md",
     "log.md",
     "Perforce.md",
     "LLM Wiki.md",
     "index.md",
     "CLAUDE.md",
     "AGENTS.md",
-    "2026-07-11.md",
-    "03 - D3D11/D3D11.DepthBuffer.md",
     "raw/books/Game Physics Engine Development.pdf",
     "raw/books",
     "thesis/reference-scout",
