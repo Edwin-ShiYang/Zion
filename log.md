@@ -221,3 +221,7 @@ created: 2026-05-25
 ## [2026-07-25] refine | Post-processing text diagram
 
 - 更新 [[rendering/Post-Processing-Pass]]：将 Mermaid 图改为稳定的 text diagram，避免 Obsidian Mermaid 自动布局导致视觉不居中。
+
+## [2026-07-28] refine | Post-Processing-Pass structure
+
+- 更新 [[rendering/Post-Processing-Pass]]：移除单独的 `center-diagram` / `wide-note` cssclasses，统一为 rendering 笔记常用结构：直觉、基本 pass 链、`DrawFullQuad()`、使用场景、blur 拆分、Begin/End、常见坑、相关链接。

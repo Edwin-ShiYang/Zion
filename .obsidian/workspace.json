@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "rendering/Post-Processing-Pass.md",
+                "file": "rendering/Blinn-Phong-Lighting.md",
                 "mode": "preview",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Post-Processing-Pass"
+              "title": "Blinn-Phong-Lighting"
             }
           }
         ]
@@ -33,7 +33,7 @@
       {
         "id": "fccd44e440ada242",
         "type": "tabs",
-        "dimension": 62.935507783543365,
+        "dimension": 75.83395107487027,
         "children": [
           {
             "id": "b7d7b430a8371fe4",
@@ -63,7 +63,7 @@
       {
         "id": "765e103309fe3fb0",
         "type": "tabs",
-        "dimension": 37.064492216456635,
+        "dimension": 24.166048925129726,
         "children": [
           {
             "id": "8429eb866f7f4a91",
@@ -89,7 +89,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 920
+    "width": 402.5
   },
   "right": {
     "id": "4422b81e3b580ef0",
@@ -178,23 +178,13 @@
               "icon": "links-going-out",
               "title": "Outgoing links from D3D11.HLSL-FX-Structure"
             }
-          },
-          {
-            "id": "082fd7aa2513e09d",
-            "type": "leaf",
-            "state": {
-              "type": "claudian-view",
-              "state": {},
-              "icon": "bot",
-              "title": "Claudian"
-            }
           }
         ],
         "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 373
+    "width": 478.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -205,38 +195,38 @@
       "graph:Open graph view": false,
       "bases:Create new base": false,
       "canvas:Create new canvas": false,
-      "obsidian-git:Open Git source control": false,
-      "realclaudian:Open Claudian": false
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "77da44d77d7c4104",
   "lastOpenFiles": [
-    "rendering/Post-Processing-Pass.md",
-    "rendering/Portal-Rendering.md",
-    "rendering/Render-Target.md",
-    "rendering/Rendering-Pass-Pipeline.canvas",
-    "rendering/Deferred-Rendering.md",
-    "rendering/BuiltIn-Raw-Shader-And-Inline-Variable.md",
-    "rendering/Blinn-Phong-Lighting.md",
-    "03 - D3D11/D3D11.Texture.md",
-    "rendering/Shadow-Map.md",
-    "03 - D3D11/D3D11.D3D11_TEXTURE2D_DESC.md",
-    "03 - D3D11/D3D11.IASetPrimitiveTopology.md",
-    "03 - D3D11/D3D11.IASetInputLayout.md",
-    "03 - D3D11/D3D11.HLSL-FX-Structure.md",
-    "03 - D3D11/D3D11.D3D11CreateDeviceAndSwapChain.md",
-    "03 - D3D11/D3D11.Draw.md",
-    "03 - D3D11/D3D11.ID3D11DeviceContext.md",
-    "03 - D3D11/D3D11.Tessellation.md",
-    "03 - D3D11/D3D11.VertexShader.md",
-    "03 - D3D11/D3D11.Rendering.md",
     "03 - D3D11/D3D11.Rasterizer.md",
-    "log.md",
-    "Perforce.md",
-    "LLM Wiki.md",
-    "index.md",
-    "CLAUDE.md",
-    "AGENTS.md",
+    "03 - D3D11/D3D11.Initializing.md",
+    "03 - D3D11/D3D11.ID3D11InputLayout.md",
+    "03 - D3D11/D3D11.Get Back.md",
+    "03 - D3D11/D3D11.HullShader.md",
+    "03 - D3D11/D3D11.IASetPrimitiveTopology.md",
+    "03 - D3D11/D3D11.ID3D11Device.md",
+    "03 - D3D11/D3D11.IndexBuffer.md",
+    "03 - D3D11/D3D11.ID3D11DeviceContext.md",
+    "03 - D3D11/D3D11.RenderTargetView.md",
+    "03 - D3D11/D3D11.Set.md",
+    "03 - D3D11/D3D11.RenderTarget.md",
+    "03 - D3D11/D3D11.Rendering.md",
+    "03 - D3D11/D3D11.PixelShader.md",
+    "03 - D3D11/D3D11.InputLayout.md",
+    "01 - C++/CPP.extern.md",
+    "01 - C++/CPP.Friend.Class.md",
+    "01 - C++/CPP.enum.md",
+    "01 - C++/CPP.double.md",
+    "01 - C++/CPP.Class.md",
+    "01 - C++/CPP.char.isupper.md",
+    "01 - C++/CPP.char.isgraph.md",
+    "01 - C++/CPP.Algorithm.max.md",
+    "01 - C++/CPP.Algorithm.find.md",
+    "01 - C++/CPP.char.isdigit.md",
+    "01 - C++/CPP.auto.md",
+    "rendering/Rendering-Pass-Pipeline.canvas",
     "raw/books/Game Physics Engine Development.pdf",
     "raw/books",
     "thesis/reference-scout",

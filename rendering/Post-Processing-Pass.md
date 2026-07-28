@@ -1,7 +1,7 @@
 ---
 type: concept
 created: 2026-07-25
-last_updated: 2026-07-25
+last_updated: 2026-07-28
 tags:
   - rendering
   - post-process
@@ -17,69 +17,29 @@ aliases:
 
 一句话直觉：**post-processing pass 不是在画世界里的物体，而是在处理一张已经画好的 texture**。
 
-例如 bloom 流程里，场景先画到 HDR texture，然后后面的 pass 一张 texture 读进来，处理后写到另一张 texture。
-
-下面是这套 pass 的数据流图：
-
-```text
-HDR Pass
-   |
-   v
-m_hdrRenderTexture
-Full HDR scene color / 完整 HDR 场景颜色
-   |
-   v
-Bright Pass
-DrawFullQuad / 提取亮部
-   |
-   v
-m_brightPassTexture
-Bright pixels only / 只保留亮部
-   |
-   v
-Horizontal Blur Pass
-DrawFullQuad / 横向模糊
-   |
-   v
-m_horizontalBlurTexture
-Horizontal blur result / 横向模糊结果
-   |
-   v
-Vertical Blur Pass
-DrawFullQuad / 纵向模糊
-   |
-   v
-m_verticalBlurTexture
-Final blurred bloom / 最终 bloom 光晕
-   |
-   v
-Tone Mapping Pass  <--- also reads m_hdrRenderTexture / 同时读取原始 HDR 场景
-DrawFullQuad / HDR + bloom -> screen color
-   |
-   v
-m_renderTargetView
-Backbuffer / screen / 最终显示到屏幕
-```
+场景通常先被画进一张 off-screen render target，例如 HDR texture。后处理阶段再把这张 texture 当作输入读取，经过 bright pass、blur、tone mapping 等步骤，最后写回 backbuffer 显示到屏幕。
 
 ---
 
-## Bloom 的基本数据流
+## 基本 Pass 链
+
+Bloom + tone mapping 的典型数据流：
 
 ```text
 HDR Pass
 = render scene into HDR texture / 把 3D 场景画进 HDR texture
 
 Bright Pass
-= extract bright pixels / 从 HDR texture 里提取亮的像素
+= extract bright pixels from HDR texture / 从 HDR texture 里提取亮部像素
 
 Horizontal Blur Pass
 = blur bright texture horizontally / 对亮部 texture 做横向模糊
 
 Vertical Blur Pass
-= blur horizontally blurred texture vertically / 对横向模糊结果做纵向模糊
+= blur the horizontal result vertically / 对横向模糊结果做纵向模糊
 
 Tone Mapping Pass
-= combine HDR scene + blurred bloom, then output to screen / 把原 HDR 场景和 bloom 合并，再输出到屏幕
+= combine HDR scene + blurred bloom, then output to screen / 合并 HDR 场景和 bloom，再输出到屏幕
 ```
 
 对应 texture：
@@ -87,9 +47,17 @@ Tone Mapping Pass
 ```text
 m_hdrRenderTexture        = full HDR scene color / 完整 HDR 场景颜色
 m_brightPassTexture       = bright pixels only / 只保留亮部
-m_horizontalBlurTexture   = horizontally blurred bright pixels / 横向模糊后的亮部
+m_horizontalBlurTexture   = horizontal blur result / 横向模糊结果
 m_verticalBlurTexture     = final blurred bloom texture / 最终 bloom 光晕
 m_renderTargetView        = backbuffer / 最终显示到屏幕的输出
+```
+
+关键关系：
+
+```text
+previous pass output texture
+-> next pass input SRV
+-> next pass output RTV
 ```
 
 ---
@@ -224,8 +192,19 @@ Draw calls already wrote the result into the bound render target / draw 的时�
 
 ---
 
+## 常见坑
+
+- 把 post-process pass 理解成“再画一个物体”：它实际是在 screen-space 里处理已有 texture。
+- 忘了解绑上一轮输出 RTV，下一轮又把同一张 texture 作为 SRV 读取：同一 resource 不能同时读写。
+- Bright pass 直接输出到 backbuffer：通常应该先输出到中间 texture，后面 blur 和 tone mapping 还要继续读取。
+- Blur 直接做完整 2D kernel：第一版优先用 horizontal + vertical 的 separable blur，成本更低。
+- Tone mapping 只读 bloom texture：最终输出通常要同时读原始 HDR scene 和 blurred bloom。
+
+---
+
 ## 相关链接
 
 - [[rendering/Render-Target]]
-- [[03 - D3D11/D3D11.Texture]]
+- [[rendering/Deferred-Rendering]]
 - [[rendering/Shadow-Map]]
+- [[03 - D3D11/D3D11.Texture]]

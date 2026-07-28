@@ -1,8 +1,58 @@
-* {
-  --font-text-size: 1.2rem;
-  --bases-table-font-size: 1.1rem;
-  --bases-table-row-height: 40px;
-  --file-line-width: 100rem;
+body {
+  --font-text-size: 22px;
+  --font-interface: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", system-ui, sans-serif;
+  --font-text: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", system-ui, sans-serif;
+  --font-monospace: "Cascadia Code", "JetBrains Mono", "Consolas", "Microsoft YaHei UI", monospace;
+  --line-height-normal: 1.7;
+  --line-height-tight: 1.35;
+  --file-line-width: 100%;
+  --bases-table-font-size: 1.15rem;
+  --bases-table-row-height: 50px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line,
+.markdown-rendered p,
+.markdown-rendered li {
+  line-height: 1.7;
+}
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4 {
+  line-height: 1.28;
+}
+
+.markdown-rendered h1 {
+  margin-block: 1.6em 0.7em;
+}
+
+.markdown-rendered h2 {
+  margin-block: 1.45em 0.65em;
+}
+
+.markdown-rendered h3,
+.markdown-rendered h4 {
+  margin-block: 1.25em 0.55em;
+}
+
+.markdown-rendered pre,
+.markdown-rendered code,
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+  font-size: 0.92em;
+  line-height: 1.5;
+}
+
+.markdown-rendered table {
+  line-height: 1.45;
+}
+
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-content,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-reading-view.is-readable-line-width .markdown-preview-sizer {
+  max-width: 100%;
+  width: 100%;
 }
 
 .internal-link {
@@ -17,4 +67,21 @@ img[alt*="center"] {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.center-diagram .markdown-rendered pre,
+.center-diagram.markdown-preview-view pre {
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-diagram .markdown-rendered pre code,
+.center-diagram.markdown-preview-view pre code {
+  text-align: left;
+}
+
+.wide-note {
+  --file-line-width: 100%;
 }
